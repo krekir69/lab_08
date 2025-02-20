@@ -1,12 +1,6 @@
 ﻿#include <iostream>
 using namespace std;
 #define N 10
-struct Node {
-	int data;//поле для хранения числа (здесь будет порядковый номер элемента).
-	Node* next;
-
-	Node(int value) : data(value), next(NULL) {}
-};
 void zad3()
 {
 	int x, i, c;
@@ -48,31 +42,24 @@ void zad3()
 	delete[] array;
 }
 void zad4(){
-	setlocale(LC_ALL, "Ru");
-	printf("\n  Линейный самоадресуемый список:\n");
-	Node* head =	NULL;
-	Node* tail = NULL;
-	for (int i = 1; i <= N; ++i) {//создаем N элементов списка.
-		Node* newNode = new Node(i);//создаем новый узел со значением i.
-			if (!head) {          //если список пуст:
-				head = newNode;   //новый узел становится головой.
-				tail = newNode;   //он же становится хвостом.
-			}
-			else {
-				tail->next = newNode; //хвост указывает на новый узел.
-				tail = newNode;       //  новый узел становится хвостом.
-			}
+
+	struct el { int s; struct el* p; };
+	struct el* p1, * p2, * p3;
+	p1 = new struct el;
+	p2 = p1;
+	for (int i = 1;i <= N;i++)
+	{
+		p2->s = i;
+		if (i < N) { p3 = new struct el; p2->p = p3; p2 = p3; }
 	}
-	Node* current = head;
-	while (current) {
-		printf("% d ,", current->data);
-		current = current->next;
+	p2->p = NULL;
+	p2 = p1;
+	while (p2 != NULL)
+	{
+		printf(" % d", p2->s); 
+		p2 = p2->p;
 	}
-	while (head) {
-		Node* temp = head;
-		head = head->next;
-		delete temp;
-	}		
+	while (p2 != NULL) { p2 = p1;p1 = p1->p;delete p2; }
 }
 int main()
 {

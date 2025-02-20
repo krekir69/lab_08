@@ -1,5 +1,5 @@
 ﻿  ConsoleApplication2.cpp
-C:\Студия ++\ConsoleApplication2\ConsoleApplication2\ConsoleApplication2.cpp(12,12): warning C4101: c: неиспользованная локальная переменная
-C:\Студия ++\ConsoleApplication2\ConsoleApplication2\ConsoleApplication2.cpp(12,9): warning C4101: i: неиспользованная локальная переменная
-C:\Студия ++\ConsoleApplication2\ConsoleApplication2\ConsoleApplication2.cpp(12,6): warning C4101: x: неиспользованная локальная переменная
+C:\Студия ++\ConsoleApplication2\ConsoleApplication2\ConsoleApplication2.cpp(6,12): warning C4101: c: неиспользованная локальная переменная
+C:\Студия ++\ConsoleApplication2\ConsoleApplication2\ConsoleApplication2.cpp(6,9): warning C4101: i: неиспользованная локальная переменная
+C:\Студия ++\ConsoleApplication2\ConsoleApplication2\ConsoleApplication2.cpp(6,6): warning C4101: x: неиспользованная локальная переменная
   ConsoleApplication2.vcxproj -> C:\Студия ++\ConsoleApplication2\x64\Debug\ConsoleApplication2.exe
